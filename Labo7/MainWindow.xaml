@@ -11,6 +11,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="10">
@@ -22,5 +23,19 @@
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Margin="10" Grid.Row="2" />
 
+        <StackPanel Grid.Row="3" Margin="10">
+            <TextBlock Text="Nombre del Producto:" />
+            <TextBox x:Name="txtProductName" Width="250" />
+            <TextBlock Text="Precio:" />
+            <TextBox x:Name="txtPrice" Width="250" />
+            <TextBlock Text="Stock:" />
+            <TextBox x:Name="txtStock" Width="250" />
+            <CheckBox x:Name="chkActive" Content="Activo" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Insertar" Click="InsertButton_Click" Margin="0 10 10 0" />
+                <Button Content="Actualizar" Click="UpdateButton_Click" Margin="0 10 10 0" />
+                <Button Content="Eliminar" Click="DeleteButton_Click" Margin="0 10 0 0" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
